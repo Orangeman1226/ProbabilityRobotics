@@ -52,7 +52,7 @@ class Robot(IRobot.IdealRobot):
     #
 
     def __init__(self,pose,agent=None,sensor=None,color="black"
-    ,obstacles_per_meter = 10,steppedon_obst_std = math.pi/60,has_obsNoise=False
+    ,obstacles_per_meter = 10,steppedon_obst_std = math.pi/360,has_obsNoise=False
     ,randam_biasRatio=(0.1,0.1),expected_stuck_time=1e100,expected_escape_time=1e-100
     ,expected_kidnap_time=1e100, kidnap_Map_Xrange=wo.World.getWorldRange(),kidnap_Map_Yrange=wo.World.getWorldRange(),has_kidnap = False):
         super().__init__(pose,agent,sensor,color)

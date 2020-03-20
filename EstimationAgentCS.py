@@ -21,6 +21,7 @@ class EstimationAgent(Ag.Agent):
         #一つ前の制御指令値で粒子の姿勢を更新する
         self.estimator.motion_update(self.prev_nu,self.prev_omega,self.time_interval)
         self.prev_nu,self.prev_omega = self.nu,self.omega
+        self.estimator.observeation_update(observeation)
 
         return self.nu,self.omega
 

@@ -16,7 +16,7 @@ timespan = 40
 timeinterval = 0.1
 world = World.World(timespan,timeinterval)
 robots = []
-
+#ToDo: ABC
 #Map
 map = Map.Map()
 
@@ -24,6 +24,7 @@ world.append(map)
 
 #Agent
 Ag = ag.Agent(0.1,0.0)
+
 
 #Robot 
 robot = Robot.Robot(np.array([0,0,0]).T,sensor=None,agent=Ag

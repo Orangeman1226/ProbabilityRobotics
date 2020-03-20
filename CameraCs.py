@@ -142,7 +142,7 @@ class Camera(ICamera.IdealCamera):
         for lm in self.map.landmarks:
             self.obsEvents = []
             
-            observed  = self.observeation_function(cam_pos,lm.pos)
+            observed  = self.observeation_function(cam_pos,lm.pos)#ロボット位置からランドマークまでの距離:r と 方向:phiを算出
             
             observed  = self.ObservePhantom(observed,cam_pos) #ファントムの写り込み
             observed  = self.OccOcclusion(observed)           #オクルージョンの写り込み
