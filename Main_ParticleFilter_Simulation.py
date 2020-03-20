@@ -30,11 +30,13 @@ particlsNum = 100
 estimator = MCL.MonteCarloLocalization(start_pos,particlsNum,envmap=map)
 circring = EstAgent.EstimationAgent(nu = 0.4,omega=10.0/180.0*math.pi,estimator = estimator,time_interval = timeinterval)
 
+
 #Robot
 robot = Robot.Robot(np.array([0,0,0]).T,sensor=Camera.Camera(map,timeinterval),agent=circring
     ,randam_biasRatio=(0.1,0.1),has_obsNoise=True,has_kidnap=False)
 
+
 world.append(robot)
 
-#Start the Animation !
+#Start the Animation !  
 world.draw()
